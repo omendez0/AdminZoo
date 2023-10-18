@@ -9,6 +9,7 @@ import { Animals } from "./module/animals/Animals";
 import { DetailAnimal } from "./module/animals/detailsAnimal/DetailAnimal";
 import { Zone } from "./module/zone/Zone";
 import { AppTheme } from "./theme/AppTheme";
+import { AuthLogin } from "./auth/auth";
 
 export const AdminZoo = () => {
   const [type, setType] = useState("");
@@ -25,6 +26,7 @@ export const AdminZoo = () => {
           >
             {!isSearching && (
               <Routes>
+                <Route path="/login" element={<AuthLogin />} />
                 <Route path="/" element={<Zone />} />
                 <Route path="/animals/:id" element={<Animals />} />
                 <Route path="/detalle-animal/:id" element={<DetailAnimal />} />
