@@ -108,7 +108,7 @@ export const DetailAnimal = () => {
           onChange={(event) => handleChange(event.target)}
           value={comment?.author ?? ""}
           name="author"
-        ></TextField>
+        />
 
         <TextField
           label="Agrege un comenatario"
@@ -118,7 +118,7 @@ export const DetailAnimal = () => {
           minRows={2}
           maxRows={10}
           name="body"
-        ></TextField>
+        />
 
         <Button
           size="small"

@@ -71,35 +71,6 @@ export const AddAnimal = ({ idZone }: Props) => {
           Agregar animal
         </Button>
       </Box>
-
-      {/* <div>
-        <input
-          className=""
-          type="text"
-          name="nameAnimal"
-          placeholder="Ingrese nombre del animal..."
-          onChange={(event) =>
-            getValueInput(event.target.name, event.target.value)
-          }
-          value={dataAnimal.nameAnimal}
-        />
-        <input
-          className="mt-4"
-          type="text"
-          name="specie"
-          placeholder="Ingrese nombre de la especie..."
-          onChange={(event) =>
-            getValueInput(event.target.name, event.target.value)
-          }
-          value={dataAnimal.specie}
-        />
-
-        <div className="groupButton">
-          <button className="mt-2" onClick={Add}>
-            Agregar animal
-          </button>
-        </div>
-      </div> */}
     </>
   );
 };

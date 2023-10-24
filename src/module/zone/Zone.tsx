@@ -8,17 +8,24 @@ export const Zone = () => {
   const { zoo, onSelectZone } = useContext(ZooContext);
 
   return (
-    <>
-      <AddZone></AddZone>
+    <Box
+      sx={{
+        display: "flex",
+        width: "100%",
+        flexDirection: "column",
+        alignItems: "center",
+      }}
+    >
+      <AddZone />
 
       <Box
         sx={{
           display: "flex",
           alignItems: "center",
-
-          marginTop: "30px",
-          gap: "30px",
+          marginTop: "80px",
+          gap: "16px",
           flexWrap: "wrap",
+          width: "90%",
         }}
       >
         {zoo.map((zoo) => (
@@ -27,9 +34,9 @@ export const Zone = () => {
             count={zoo.animals.length}
             data={zoo}
             viewZone={onSelectZone}
-          ></ListZone>
+          />
         ))}
       </Box>
-    </>
+    </Box>
   );
 };

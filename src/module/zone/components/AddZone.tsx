@@ -3,10 +3,6 @@ import { Box, Button, TextField } from "@mui/material";
 import { useContext, useState } from "react";
 import { ZooContext } from "../../../context/ZooContext";
 
-// type Props = {
-//     onNewZone:(name:string,id:number)=>void
-// }
-
 export const AddZone = () => {
   const { generateId, onAddZone } = useContext(ZooContext);
 
@@ -23,32 +19,34 @@ export const AddZone = () => {
   };
 
   return (
-    <>
-      <Box
+    <Box
+      sx={{
+        display: "flex",
+        gap: "10px",
+        marginTop: "40px",
+        width: "50%",
+      }}
+    >
+      <TextField
+        label="Ingrese el nombre de la zona"
+        variant="outlined"
+        fullWidth
+        onChange={(event) => onGetValueInput(event.target.value)}
+        value={nameZone}
+      />
+      <Button
+        size="small"
         sx={{
-          display: "flex",
-          gap: "10px",
+          color: "#FFF",
+          width: "200px",
+          borderRadius: "18px",
         }}
+        variant="contained"
+        startIcon={<AddCircle />}
+        onClick={Add}
       >
-        <TextField
-          label="Ingrese el nombre de la zona"
-          variant="outlined"
-          onChange={(event) => onGetValueInput(event.target.value)}
-          value={nameZone}
-        />
-        <Button
-          size="small"
-          sx={{
-            color: "#FFF",
-            borderRadius: "18px",
-          }}
-          variant="contained"
-          startIcon={<AddCircle />}
-          onClick={Add}
-        >
-          Agregar zona
-        </Button>
-      </Box>
-    </>
+        Agregar zona
+      </Button>
+    </Box>
   );
 };

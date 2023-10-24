@@ -1,15 +1,11 @@
-import ReactDOM from 'react-dom/client'
-import { BrowserRouter } from 'react-router-dom'
-import { AdminZoo } from './AdminZoo'
+import ReactDOM from "react-dom/client";
+import { BrowserRouter } from "react-router-dom";
+import { AdminZoo } from "./AdminZoo";
 
-import './index.css'
+import "./index.css";
 
-ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
-  // <React.StrictMode>
-  //   <App />
-  // </React.StrictMode>,
+ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
   <BrowserRouter>
-    <AdminZoo/>
+    <AdminZoo />
   </BrowserRouter>
-
-)
+);

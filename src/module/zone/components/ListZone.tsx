@@ -17,71 +17,43 @@ export const ListZone = ({ data, viewZone, count }: Props) => {
     <>
       <Card
         sx={{
-          width: "31%",
+          width: "100%",
           borderRadius: "12px",
+          padding: "16px 28px",
         }}
-        elevation={3}
+        elevation={2}
       >
-        <CardContent>
-          <Box
-            sx={{
-              display: "flex",
-              justifyContent: "space-between",
-            }}
-          >
-            <Typography
-              variant="button"
-              onClick={getSelectZone}
-              sx={{
-                fontWeight: "bold",
-                color: "primary.main",
-                cursor: "pointer",
-              }}
-            >
-              {data.nameZone}
-            </Typography>
-
-            <Typography
-              sx={{
-                fontSize: "14px",
-              }}
-            >
-              Cantidad de animales:{count}{" "}
-            </Typography>
-          </Box>
-        </CardContent>
-
-        {/* <Box
+        <Box
           sx={{
             display: "flex",
-            justifyContent: "center",
-            p: "10px 0",
+            justifyContent: "space-between",
+            alignItems: "center",
           }}
         >
-          <Button
-            size="small"
-            sx={{
-              borderRadius: "18px",
-            }}
-            variant="outlined"
+          <Typography
+            variant="button"
             onClick={getSelectZone}
+            sx={{
+              fontWeight: "bold",
+              color: "primary.main",
+              cursor: "pointer",
+              textTransform: "capitalize",
+              fontSize: "1.2rem",
+            }}
           >
-            Ver zona
-          </Button>
-        </Box> */}
+            {data.nameZone}
+          </Typography>
+
+          <Typography
+            sx={{
+              fontSize: "14px",
+              opacity: 0.8,
+            }}
+          >
+            Cantidad de animales:{" " + count}
+          </Typography>
+        </Box>
       </Card>
-      {/* <div className="mt-4">
-        <div className="">
-          <ul className="">
-            <li className=" item-zone">
-              <p>{data.nameZone}</p>
-              <button onClick={getSelectZone} className="">
-                Ver zona
-              </button>
-            </li>
-          </ul>
-        </div>
-      </div> */}
     </>
   );
 };
