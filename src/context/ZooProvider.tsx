@@ -120,6 +120,8 @@ export const ZooProvider = ({ children }: Props) => {
     setZoo(auxZoo);
   };
 
+  // console.log("Zoo con animales", zoo);
+
   const onSelectZone = (value: DataZoo) => {
     navigate(`/animals/${value.id}`);
   };

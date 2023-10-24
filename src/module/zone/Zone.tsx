@@ -1,11 +1,21 @@
 import { Box } from "@mui/system";
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
 import { ZooContext } from "../../context/ZooContext";
 import { AddZone } from "./components/AddZone";
 import { ListZone } from "./components/ListZone";
+import { getZones } from "../../services/zoneServices";
 
 export const Zone = () => {
   const { zoo, onSelectZone } = useContext(ZooContext);
+
+  const loadZone = async () => {
+    const data = await getZones();
+    console.log(data);
+  };
+
+  useEffect(() => {
+    loadZone();
+  }, []);
 
   return (
     <Box
