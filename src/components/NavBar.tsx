@@ -30,6 +30,7 @@ const ViewDataSearch = ({
 }) => {
   let component = <BackToMain setTypeToBack={setType} />;
 
+  console.log(result);
   switch (type) {
     case TypeSearch.Zone:
       return (
