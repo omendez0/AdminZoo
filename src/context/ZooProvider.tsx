@@ -71,6 +71,7 @@ export const ZooProvider = ({ children }: Props) => {
     idZone: number
   ): void => {
     const auxZoo = [...zoo];
+
     let findZone = zoo.findIndex((x) => x.id === idZone);
     let findAnimal = auxZoo[findZone].animals.findIndex(
       (x) => x.id === idAnimal

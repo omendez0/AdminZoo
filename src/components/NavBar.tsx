@@ -11,7 +11,7 @@ import {
   dataAnswer,
   dataComment,
   dataZone,
-} from "../model/dataView";
+} from "../model/DataView";
 import { ContentTypeSearch } from "../layout/ContentTypeSearch";
 
 type Props = {
