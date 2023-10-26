@@ -12,7 +12,6 @@ export const Zone = () => {
     const data = await getZones();
     console.log(data);
   };
-  console.log(zoo);
 
   useEffect(() => {
     loadZone();
